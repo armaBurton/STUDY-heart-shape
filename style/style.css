@@ -39,7 +39,7 @@ body{
     transform-origin :100% 100%; 
 } */
 
-#ball-01, #ball-02, #ball-03{
+.ball{
     position: absolute;
     height: 60px;
     width: 60px;
@@ -83,7 +83,7 @@ body{
 #cup-01:after, #cup-02:after, #cup-03:after{
     left:0;
     transform: skew(-15deg);
-    background: linear-gradient(-80deg, red, red, maroon);
+    background: linear-gradient(-80deg, red, red, purple);
     border-left: 2px solid purple;
 }
 
@@ -92,4 +92,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.move-cup{
+    bottom: 80px;
+}
+
+.move-ball{
+    bottom: -60px;
 }
