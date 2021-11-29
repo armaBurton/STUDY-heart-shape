@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -38,7 +39,7 @@ body{
     transform-origin :100% 100%; 
 } */
 
-#ball{
+#ball-01, #ball-02, #ball-03{
     position: absolute;
     height: 60px;
     width: 60px;
@@ -50,7 +51,7 @@ body{
     border: 2px solid blue;
 }
 
-#cup{
+#cup-01, #cup-02, #cup-03{
     position: relative;
     width: 90px;
     height: 100px;
@@ -60,7 +61,7 @@ body{
     align-items: center;
 }
 
-#cup:before, #cup:after{
+#cup-01:before, #cup-01:after, #cup-02:before, #cup-02:after, #cup-03:before, #cup-03:after{
     position: absolute;
     content: "";
     left: 45px;
@@ -75,13 +76,20 @@ body{
     border-bottom: 1px solid purple;
 }
 
-#cup::before{
+#cup-01::before, #cup-02::before, #cup-03::before{
     border-right: 1px solid purple;
 }
 
-#cup:after{
+#cup-01:after, #cup-02:after, #cup-03:after{
     left:0;
     transform: skew(-15deg);
-    background: linear-gradient(-80deg, red, red, darkred);
+    background: linear-gradient(-80deg, red, red, maroon);
     border-left: 2px solid purple;
+}
+
+.cup-container{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
